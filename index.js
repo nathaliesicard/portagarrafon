@@ -1,10 +1,13 @@
 
 var koa = require('koa');
 var app = koa();
+var staticMw = require('koa-static');
 
-app.use(function *(){
-    this.body = 'Bienvenidos a la tienda de porta garrafones!!';
-});
+
+
+app.use(staticMw('public'));
+
+
 
 var port = process.env.PORT || 3000;
 
