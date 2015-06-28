@@ -6,4 +6,8 @@ app.use(function *(){
     this.body = 'Bienvenidos a la tienda de porta garrafones!!';
 });
 
-app.listen(3000);
+var port = process.env.PORT || 3000;
+
+app.listen(port);
+
+console.log('Listening port %s', port);
